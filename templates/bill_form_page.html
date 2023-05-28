@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Form</title>
+</head>
+<body>
+    <h2>Yooo !! welcome to the bill page !!! </h2>
+    <h3>The Bill form </h3>
+    <p>Fill in the form and clck the button to get the results: </p>
+    <form action="{{url_for('results_page')}}" method="POST">
+
+        {{bill_form.amount.label}} {{bill_form.amount}}
+        <br>
+        {{bill_form.period.label}} {{bill_form.period}}
+        <hr>
+        <p>First Flatmate</p>
+        {{bill_form.name_1.label}} {{bill_form.name_1}}
+        <br>
+        {{bill_form.days_in_house_1.label}} {{bill_form.days_in_house_1}}
+        <hr>
+        <p>Second Flatmate</p>
+        {{bill_form.name_2.label}} {{bill_form.name_2}}
+        <br>
+        {{bill_form.days_in_house_2.label}} {{bill_form.days_in_house_2}}
+        <br>
+        {{bill_form.button}}
+
+    </form>
+</body>
+</html>
